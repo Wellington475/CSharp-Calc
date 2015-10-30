@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FirstWord
 {
-    class Calculator
+    public class Calculator
     {
         private void Line(int i, string s)
         {
@@ -17,32 +17,40 @@ namespace FirstWord
             }
         }
 
-        private void Sum(int i, int j)
+        public int Sum(int i, int j)
         {
             Console.Clear();
             this.Line(80, null);
             Console.WriteLine("Resultado: " + i + " + " + j + " = " + (i + j));
+
+            return (i + j);
         }
 
-        private void Sub(int i, int j)
+        public int Sub(int i, int j)
         {
             Console.Clear();
             this.Line(80, null);
             Console.WriteLine("Resultado: " + i + " - " + j + " = " + (i - j));
+
+            return (i - j);
         }
 
-        private void Mult(int i, int j)
+        public int Mult(int i, int j)
         {
             Console.Clear();
             this.Line(80, null);
             Console.WriteLine("Resultado: " + i + " * " + j + " = " + (i * j));
+
+            return (i * j);
         }
 
-        private void Div(int i, int j)
+        public int Div(int i, int j)
         {
             Console.Clear();
             this.Line(80, null);
             Console.WriteLine("Resultado: " + i + " / " + j + " = " + (i / j));
+
+            return (i / j);
         }
 
 
