@@ -31,7 +31,6 @@ namespace Tests
             }
             catch (Exception e)
             {
-
                 throw e;
             }
         }
