@@ -31,7 +31,7 @@ namespace Tests
             }
             catch (Exception e)
             {
-                Assert.Fail("");
+
                 throw e;
             }
         }
@@ -48,7 +48,6 @@ namespace Tests
                 Assert.AreNotEqual(5, result);
             }
             catch (Exception e) {
-                Assert.Fail("");
                 throw e;
             }
         }
@@ -67,7 +66,6 @@ namespace Tests
             }
             catch (Exception e)
             {
-                Assert.Fail("");
                 throw e;
             }
         }
@@ -86,7 +84,6 @@ namespace Tests
             }
             catch (Exception e)
             {
-                Assert.Fail("");
                 throw e;
             }
         }
@@ -105,7 +102,6 @@ namespace Tests
             }
             catch (Exception e)
             {
-                Assert.Fail("");
                 throw e;
             }
         }
@@ -124,7 +120,6 @@ namespace Tests
             }
             catch (Exception e)
             {
-                Assert.Fail("");
                 throw e;
             }
         }
@@ -143,7 +138,6 @@ namespace Tests
             }
             catch (Exception e)
             {
-                Assert.Fail("");
                 throw e;
             }
         }
@@ -161,7 +155,6 @@ namespace Tests
             }
             catch (Exception e)
             {
-                Assert.Fail("");
                 throw e;
             }
         }

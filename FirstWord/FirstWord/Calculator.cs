@@ -52,8 +52,7 @@ namespace FirstWord
 
             return (i / j);
         }
-
-
+        
         private int Menu()
         {
             int opcao;
@@ -73,39 +72,65 @@ namespace FirstWord
             return opcao;
         }
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            int opcao;
-            int num1;
-            int num2;
+            var continuar = true;
 
-            Calculator calc = new Calculator();
-
-            calc.Line(80, null);
-            Console.WriteLine("Digite o primeiro numero:");
-            num1 = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Digite o segundo numero:");
-            num2 = int.Parse(Console.ReadLine());
-
-            Console.Clear();
-
-            opcao = calc.Menu();
-            switch (opcao)
+            while (continuar)
             {
-                case 1:
-                    calc.Sum(num1, num2);
-                    break;
-                case 2:
-                    calc.Sub(num1, num2);
-                    break;
-                case 3:
-                    calc.Mult(num1, num2);
-                    break;
-                case 4:
-                    calc.Div(num1, num2);
-                    break;
+                continuar = Calcular();
             }
+        }
+
+        private static bool Calcular()
+        {
+            try
+            {
+                Console.Clear();
+                int opcao;
+                int num1;
+                int num2;
+
+                Calculator calc = new Calculator();
+
+                calc.Line(80, null);
+                Console.WriteLine("Digite o primeiro numero:");
+                num1 = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Digite o segundo numero:");
+                num2 = int.Parse(Console.ReadLine());
+
+                Console.Clear();
+
+                opcao = calc.Menu();
+                switch (opcao)
+                {
+                    case 1:
+                        calc.Sum(num1, num2);
+                        break;
+                    case 2:
+                        calc.Sub(num1, num2);
+                        break;
+                    case 3:
+                        calc.Mult(num1, num2);
+                        break;
+                    case 4:
+                        calc.Div(num1, num2);
+                        break;
+                }
+
+                Console.WriteLine();
+                Console.WriteLine("Digite 'S' para calcular novo valor ou qualquer tecla para finalizar...");
+                if (Console.ReadKey().Key.ToString() == "S")
+                {
+                    return true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            return false;
         }
     }
 }
