@@ -48,9 +48,17 @@ namespace FirstWord
         {
             Console.Clear();
             this.Line(80, null);
-            Console.WriteLine("Resultado: " + i + " / " + j + " = " + (i / j));
-
-            return (i / j);
+            
+            if(j != 0)
+            {
+                Console.WriteLine("Resultado: " + i + " / " + j + " = " + (i / j));
+                return (i / j);
+            }
+            else
+            {
+                Console.WriteLine("No se puede dividir por cero");
+                return;
+            }     
         }
         
         private int Menu()
